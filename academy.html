@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy - Mukti AI</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #1a237e;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand img {
+            height: 50px;
+            margin-right: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #64ffda;
+        }
+
+        .contact-btn {
+            background-color: #ffd700;
+            color: #1a237e;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #ffed4a;
+        }
+
+        /* Academy Page Specific Styles */
+        .academy-hero {
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .academy-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .program-section {
+            padding: 4rem 2rem;
+        }
+
+        .program-section:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            color: #1a237e;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #666;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .program-card h3 {
+            color: #1a237e;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .content-type-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .content-column {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-column h3 {
+            color: #1a237e;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .resource-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .resource-links li {
+            margin-bottom: 1rem;
+        }
+
+        .resource-links a {
+            color: #1a237e;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .resource-links a:hover {
+            background-color: #f5f5f5;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .platform-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .platform-card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1rem;
+        }
+
+        .enroll-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #f5f5f5;
+        }
+
+        .enroll-button {
+            display: inline-block;
+            background-color: #1a237e;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            font-weight: 500;
+            margin-top: 1.5rem;
+        }
+
+        .enroll-button:hover {
+            background-color: #0d47a1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a237e;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="muktiai.html" class="brand">
+                <span class="brand-name" style="color: white; font-size: 2rem; font-weight: bold; margin-left: 10px;">Mukti AI</span>
+            </a>
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="academy.html">Academy</a>
+                <a href="contact.html" class="contact-btn">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="academy-hero">
+        <h1>Mukti AI Academy</h1>
+        <p>Empowering learners through comprehensive AI education</p>
+    </section>
+
+    <section class="program-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Educational Programs</h2>
+                <p>Structured learning paths designed for different expertise levels and goals</p>
+            </div>
+            <div class="program-grid">
+                <div class="program-card">
+                    <h3>AI Fundamentals</h3>
+                    <ul>
+                        <li>Introduction to AI concepts</li>
+                        <li>Basic programming skills</li>
+                        <li>Data handling and analysis</li>
+                        <li>Ethics in AI</li>
+                        <li>Real-world applications</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <h3>Advanced AI Development</h3>
+                    <ul>
+                        <li>LLM implementation</li>
+                        <li>AI agents development</li>
+                        <li>Neural network architecture</li>
+                        <li>Advanced optimization techniques</li>
+                        <li>Project portfolio development</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <h3>Industry-Specific AI</h3>
+                    <ul>
+                        <li>Healthcare AI applications</li>
+                        <li>Financial technology solutions</li>
+                        <li>Manufacturing automation</li>
+                        <li>Educational technology</li>
+                        <li>Custom industry solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="program-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Learning Formats</h2>
+                <p>Flexible learning options to suit your schedule and preferences</p>
+            </div>
+            <div class="content-type-container">
+                <div class="content-column">
+                    <h3>Online Learning</h3>
+                    <ul>
+                        <li>Self-paced video courses</li>
+                        <li>Interactive coding exercises</li>
+                        <li>Virtual workshops and webinars</li>
+                        <li>Online community support</li>
+                        <li>Digital resources and guides</li>
+                        <li>Remote mentoring sessions</li>
+                    </ul>
+                </div>
+                <div class="content-column">
+                    <h3>Offline Learning</h3>
+                    <ul>
+                        <li>In-person workshops</li>
+                        <li>Hands-on training sessions</li>
+                        <li>Classroom lectures</li>
+                        <li>Group projects</li>
+                        <li>Networking events</li>
+                        <li>On-site consulting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="program-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Learning Resources</h2>
+                <p>Comprehensive materials to support your AI learning journey</p>
+            </div>
+            <div class="program-grid">
+                <div class="program-card">
+                    <h3>Digital Content</h3>
+                    <ul>
+                        <li>Video tutorials and lectures</li>
+                        <li>Interactive notebooks</li>
+                        <li>Code repositories</li>
+                        <li>Practice exercises</li>
+                        <li>Assessment materials</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <h3>Documentation</h3>
+                    <ul>
+                        <li>Implementation guides</li>
+                        <li>Best practice documents</li>
+                        <li>Case studies</li>
+                        <li>Reference materials</li>
+                        <li>Project templates</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <h3>Community Resources</h3>
+                    <ul>
+                        <li>Discussion forums</li>
+                        <li>Study groups</li>
+                        <li>Peer reviews</li>
+                        <li>Project collaborations</li>
+                        <li>Mentorship programs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="program-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Learning Platforms</h2>
+                <p>Access our content across various platforms</p>
+            </div>
+            <div class="platform-grid">
+                <div class="platform-card">
+                    <img src="/api/placeholder/60/60" alt="YouTube">
+                    <h3>YouTube Channel</h3>
+                    <p>Free tutorials and tech insights</p>
+                </div>
+                <div class="platform-card">
+                    <img src="/api/placeholder/60/60" alt="LinkedIn">
+                    <h3>LinkedIn Learning</h3>
+                    <p>Professional development courses</p>
+                </div>
+                <div class="platform-card">
+                    <img src="/api/placeholder/60/60" alt="Custom Platform">
+                    <h3>Learning Portal</h3>
+                    <p>Premium courses and resources</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="enroll-section">
+        <div class="section-container">
+            <h2>Ready to Start Learning?</h2>
+            <p>Join our community of learners and begin your AI journey today</p>
+            <a href="contact.html" class="enroll-button">Enroll Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mukti AI. All rights reserved.</p>
+    </footer>
+</body>
+</html>

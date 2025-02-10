@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mukti AI - AI Consulting & Education</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #1a237e;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #64ffda;
+        }
+
+        .contact-btn {
+            background-color: #ffd700;
+            color: #1a237e;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #ffed4a;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero .motto {
+            font-size: 1.8rem;
+            font-style: italic;
+            margin: 1.5rem auto;
+            max-width: 800px;
+            color: #ffd700;
+            font-weight: 500;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 1.5rem auto;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section h2 {
+            color: #1a237e;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #1a237e;
+            margin-bottom: 1rem;
+        }
+
+        /* Vision & Mission Section */
+        .vision-mission {
+            background-color: #f5f5f5;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .vision-content, .mission-content {
+            margin-bottom: 3rem;
+        }
+
+        .mission-content {
+            margin-bottom: 0;
+        }
+
+        .vision-mission h2 {
+            color: #1a237e;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .vision-mission p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-link {
+            color: #1a237e;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border: 2px solid #1a237e;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            background-color: #1a237e;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a237e;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="muktiai.html" class="brand">
+                <span class="brand-name" style="color: white; font-size: 2rem; font-weight: bold; margin-left: 10px;">Mukti AI</span>
+            </a>
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="academy.html">Academy</a>
+                <a href="contact.html" class="contact-btn">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to Mukti AI</h1>
+        <p class="motto">"Guiding Intelligence, Liberating Potential"</p>
+        <p class="subtitle">Empowering individuals and organizations through AI education and transformation</p>
+    </section>
+
+    <main class="main-content">
+        <section class="section" id="about">
+            <h2>The AI Revolution is Here</h2>
+            <p>We are witnessing the dawn of the Intelligence Revolution - a transformation as significant as the Cognitive, Agricultural, and Industrial revolutions that came before. At Mukti AI, we believe in democratizing AI knowledge and ensuring everyone can benefit from this technological leap forward.</p>
+            <p>Just as previous revolutions transformed how we think, work, and live, the AI Revolution is reshaping our world at an unprecedented pace. Our mission is to ensure no one is left behind in this transformation.</p>
+        </section>
+
+        <section class="section" id="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Mukti AI Consulting</h3>
+                    <p>Strategic AI consulting for businesses, helping you navigate the AI transformation journey with confidence. We provide:</p>
+                    <ul>
+                        <li>AI Strategy Development</li>
+                        <li>Implementation Planning</li>
+                        <li>Custom AI Solutions</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Mukti AI Academy</h3>
+                    <p>Comprehensive AI education programs designed for:</p>
+                    <ul>
+                        <li>Individuals seeking career advancement</li>
+                        <li>Educational institutions modernizing their curriculum</li>
+                        <li>Companies training their workforce</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="vision-mission">
+            <div class="content-wrapper">
+                <div class="vision-content">
+                    <h2>Our Vision</h2>
+                    <p>At Mukti AI, we envision a future where the Intelligence Revolution empowers rather than displaces humanity. We believe in bridging the gap between technological advancement and human adaptation, ensuring that no one is left behind in this transformative era.</p>
+                </div>
+                <div class="mission-content">
+                    <h2>Our Mission</h2>
+                    <p>To guide individuals and organizations through their AI transformation journey by providing strategic consulting and comprehensive education, enabling them to harness AI's potential while maintaining human-centric values.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="social-media">
+            <h2>Connect With Us</h2>
+            <div class="social-links">
+                <a href="https://substack.com/@muktiai" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://www.youtube.com" target="_blank" class="social-link">YouTube</a>
+                <a href="https://github.com/PandyaDarshit" target="_blank" class="social-link">Twitter</a>
+                <a href="https://linktr.ee/muktiai" target="_blank" class="social-link">linktr</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mukti AI. All rights reserved.</p>
+    </footer>
+</body>
+</html>

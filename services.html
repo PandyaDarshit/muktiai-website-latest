@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Mukti AI</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #1a237e;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand img {
+            height: 50px;
+            margin-right: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #64ffda;
+        }
+
+        .contact-btn {
+            background-color: #ffd700;
+            color: #1a237e;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #ffed4a;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a237e;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Services Page Specific Styles */
+        .services-hero {
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .services-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .target-group-section {
+            padding: 4rem 2rem;
+        }
+
+        .target-group-section:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .target-group-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .target-group-header h2 {
+            color: #1a237e;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .target-group-header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #666;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #1a237e;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .service-card li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-card li:before {
+            content: "•";
+            color: #1a237e;
+            position: absolute;
+            left: 0;
+        }
+
+        .cta-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #1a237e;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+
+        .cta-button:hover {
+            background-color: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="muktiai.html" class="brand">
+                <span class="brand-name" style="color: white; font-size: 2rem; font-weight: bold; margin-left: 10px;">Mukti AI</span>
+            </a>
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="academy.html">Academy</a>
+                <a href="contact.html" class="contact-btn">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="services-hero">
+        <h1>Our Services</h1>
+        <p>Comprehensive AI solutions tailored for individuals, businesses, and educational institutions</p>
+    </section>
+
+    <!-- Rest of the content remains the same as in the original services.html -->
+    <section class="target-group-section">
+        <div class="section-container">
+            <div class="target-group-header">
+                <h2>For Companies</h2>
+                <p>Transform your business with AI-driven solutions and strategic guidance</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Strategic AI Consulting</h3>
+                    <ul>
+                        <li>AI readiness assessment</li>
+                        <li>Digital transformation roadmap</li>
+                        <li>Technology stack optimization</li>
+                        <li>ROI analysis and planning</li>
+                        <li>Change management strategy</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>AI Implementation</h3>
+                    <ul>
+                        <li>Custom AI solution development</li>
+                        <li>LLM integration and optimization</li>
+                        <li>AI agent development</li>
+                        <li>Process automation</li>
+                        <li>System integration</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Enterprise Training</h3>
+                    <ul>
+                        <li>Team upskilling programs</li>
+                        <li>Technical workshops</li>
+                        <li>Leadership AI awareness</li>
+                        <li>Custom training modules</li>
+                        <li>Ongoing support and mentoring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="target-group-section">
+        <div class="section-container">
+            <div class="target-group-header">
+                <h2>For Educational Institutions</h2>
+                <p>Modernize education with AI-powered tools and comprehensive training</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Curriculum Integration</h3>
+                    <ul>
+                        <li>AI curriculum development</li>
+                        <li>Educational tool selection</li>
+                        <li>Learning outcome optimization</li>
+                        <li>Assessment modernization</li>
+                        <li>Blended learning strategies</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Faculty Development</h3>
+                    <ul>
+                        <li>AI literacy programs</li>
+                        <li>Teaching with AI workshops</li>
+                        <li>Tool-specific training</li>
+                        <li>Pedagogical best practices</li>
+                        <li>Ongoing support system</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Infrastructure Setup</h3>
+                    <ul>
+                        <li>AI lab establishment</li>
+                        <li>Technology infrastructure</li>
+                        <li>Security implementation</li>
+                        <li>Integration with existing systems</li>
+                        <li>Scalability planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="target-group-section">
+        <div class="section-container">
+            <div class="target-group-header">
+                <h2>For Individuals</h2>
+                <p>Enhance your career with personalized AI learning and development</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Skill Development</h3>
+                    <ul>
+                        <li>Personalized learning paths</li>
+                        <li>Hands-on project experience</li>
+                        <li>Portfolio development</li>
+                        <li>Career transition guidance</li>
+                        <li>Industry-specific training</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Technical Training</h3>
+                    <ul>
+                        <li>AI fundamentals</li>
+                        <li>LLM application development</li>
+                        <li>Programming for AI</li>
+                        <li>Tools and frameworks</li>
+                        <li>Best practices and patterns</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Professional Growth</h3>
+                    <ul>
+                        <li>Mentorship programs</li>
+                        <li>Career coaching</li>
+                        <li>Industry networking</li>
+                        <li>Project consultation</li>
+                        <li>Certification preparation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="target-group-section">
+        <div class="section-container">
+            <div class="cta-container">
+                <h2>Ready to Start Your AI Journey?</h2>
+                <p>Let's discuss how we can help you achieve your goals</p>
+                <a href="contact.html" class="cta-button">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mukti AI. All rights reserved.</p>
+    </footer>
+</body>
+</html>
